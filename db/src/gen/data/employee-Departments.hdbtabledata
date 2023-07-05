@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "EMPLOYEE_DEPARTMENTS",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "employee-Departments.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "NAME",
+          "HEAD"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "NAME": "name",
+        "HEAD": "head"
+      }
+    }
+  ]
+}

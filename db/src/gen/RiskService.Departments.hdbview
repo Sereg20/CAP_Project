@@ -1,0 +1,12 @@
+VIEW RiskService_Departments AS SELECT
+  Departments_0.createdAt,
+  Departments_0.createdBy,
+  Departments_0.modifiedAt,
+  Departments_0.modifiedBy,
+  Departments_0.ID,
+  Departments_0.name,
+  Departments_0.head
+FROM employee_Departments AS Departments_0
+WITH ASSOCIATIONS (
+  MANY TO MANY JOIN RiskService_Employees AS employees ON (employees.department_ID = ID)
+)

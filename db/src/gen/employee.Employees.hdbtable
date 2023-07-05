@@ -1,0 +1,14 @@
+COLUMN TABLE employee_Employees (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  ID NVARCHAR(36) NOT NULL,
+  name NVARCHAR(100),
+  position NVARCHAR(100),
+  room NVARCHAR(5),
+  department_ID NVARCHAR(36),
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN employee_Departments AS department ON (department.ID = department_ID)
+)
